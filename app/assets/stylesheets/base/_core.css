@@ -1,0 +1,14 @@
+.main_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar_container {
+    width: 359px;
+    height: 100vh;
+}
+
+
+.content_container {
+    width: 80%;
+}

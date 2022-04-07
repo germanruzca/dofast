@@ -1,0 +1,79 @@
+.new_session {
+    background: linear-gradient(70deg, #8E415F, #FFD200);
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_square {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    margin: 100px;
+}
+
+.login_header {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.login_header span {
+    font-family: "Roboto", Sans-Serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #A4A4A4;
+}
+
+.field_text {
+    margin-bottom: 30px;
+    font-family: "Roboto", Sans-Serif;
+    font-weight: 700;
+}
+
+.field_text input {
+    width: 350px;
+    height: 40px;
+    background-color: #EFEFEF;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.button_login input {
+    background-color: #E5BD59;
+    width: 200px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Roboto Light" , Sans-Serif;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_links {
+    margin: 45px;
+    align-self: flex-start;
+}
+
+.login_links a {
+    align-self: flex-end;
+    text-decoration: none;
+    color: #909090;
+    font-family: "Roboto Light", Sans-Serif;
+}

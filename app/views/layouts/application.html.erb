@@ -11,8 +11,21 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="main_container">
+      <% if user_signed_in? %>
+        <div class="sidebar_container">
+          <%= render 'layouts/sidebar' %>
+        </div>
+      <% end %>
+      <div class="content_container">
+        <% if notice %>
+          <p class="notice"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert"><%= alert %></p>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
