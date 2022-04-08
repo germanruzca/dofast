@@ -2,5 +2,5 @@
   <%= button_to 'Current Projects' %>
   <%= button_to 'Facture' %>
   <%= button_to 'Inbox' %>
-  <%= button_to 'Profile' %>
+  <%= button_to 'Profile', user_path(current_user.id), method: :get%>
 </div>
