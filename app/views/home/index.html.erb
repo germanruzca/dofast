@@ -1,4 +1,0 @@
-<% if current_user %>
-  <h1><%= "#{current_user.first_name} from #{current_user.country}" %></h1>
-  <%= button_to 'Delete', destroy_user_session_path, method: :delete%>
-<% end %>

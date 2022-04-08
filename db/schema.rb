@@ -10,9 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_05_043209) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_08_183738) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "offer_types", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "offers", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.decimal "earning"
+    t.bigint "offer_types_id", null: false
+    t.string "media"
+    t.boolean "accepted"
+    t.boolean "closed"
+    t.boolean "previous_conversation"
+    t.datetime "delivered_at", precision: nil
+    t.bigint "status_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["offer_types_id"], name: "index_offers_on_offer_types_id"
+    t.index ["status_id"], name: "index_offers_on_status_id"
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "role"
@@ -23,6 +47,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_05_043209) do
 
   create_table "statuses", force: :cascade do |t|
     t.string "status"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -49,6 +80,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_05_043209) do
     t.index ["status_id"], name: "index_users_on_status_id"
   end
 
+  add_foreign_key "offers", "offer_types", column: "offer_types_id"
+  add_foreign_key "offers", "statuses"
   add_foreign_key "users", "roles"
   add_foreign_key "users", "statuses"
 end
