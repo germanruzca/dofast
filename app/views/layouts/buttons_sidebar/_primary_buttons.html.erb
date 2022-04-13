@@ -1,6 +1,6 @@
 <div class="primary_button">
-  <%= button_to 'Current Projects' %>
-  <%= button_to 'Facture' %>
+  <%= button_to 'Current projects' %>
+  <%= button_to 'Create offer', new_offer_path, method: :get %>
   <%= button_to 'Inbox' %>
   <%= button_to 'Profile', user_path(current_user.id), method: :get%>
 </div>
