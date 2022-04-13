@@ -1,0 +1,25 @@
+.offer_card {
+    background-color: #F2F2F2;
+    width: 950px;
+    padding: 5px 30px;
+    margin: 40px 45px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: Sans-Serif, "Roboto Light";
+}
+
+.offer_card h2 {
+    font-size: 36px;
+}
+
+.divided_card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    color: #646161;
+}

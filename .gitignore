@@ -29,3 +29,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# database config
+/config/database.yml
+
+#rubymine
+/.idea

@@ -1,0 +1,11 @@
+<div>
+  <h1 class="title_index_offer">This are the leatest offers</h1>
+  <div>
+    <% @offers.each do |offer| %>
+      <h2><%= offer.title %></h2>
+      <p><%= offer.description %></p>
+      <p>By <%= offer.offer_type.name %></p>
+      <hr>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.title_index_offer {
+    color: red;
+    font-family: "Roboto Light", Sans-Serif;
+}
+
+.header_tags {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tags h1 a {
+    font-family: "Roboto Light", Sans-Serif;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.tags_color_selected {
+    color: #E5BD59;
+}
+
+.tags_color_unselected {
+    color: #000000;
+}

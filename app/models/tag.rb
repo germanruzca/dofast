@@ -1,3 +1,3 @@
 class Tag < ApplicationRecord
-  has_many :offer_types
+  has_many :offers
 end

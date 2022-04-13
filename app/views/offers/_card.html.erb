@@ -1,0 +1,40 @@
+<% @offers.each do | offer | %>
+  <div class="offer_card">
+    <div>
+      <h2><%= offer.title %></h2>
+    </div>
+    <div>
+      <p><i class="fa-solid fa-tag"></i> <%= offer.tag.name %></p>
+    </div>
+
+
+    <div class="divided_card">
+      <div>
+        <p>Employer: <%= "#{offer.user.first_name} #{offer.user.last_name}" %></p>
+      </div>
+
+      <div>
+        <% if offer.previous_conversation %>
+          <p>Is needed to get in contact with the employer.</p>
+        <% else %>
+          <p>No need to get in contact with the employer.</p>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="divided_card">
+      <div>
+        <p>Earning: $<%= offer.earning %></p>
+        <p>Payed by <%= offer.offer_type.name %></p>
+      </div>
+
+      <div class="time">
+        <% if Time.at(offer.created_at).to_date == Time.at(Time.now).to_date %>
+          <p>Published: <%= distance_of_time_in_words_to_now(offer.created_at) %> </p>
+        <% else %>
+          <p>Published: <%= offer.created_at.strftime("%d %b %Y") %> </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

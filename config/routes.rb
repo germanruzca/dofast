@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  root 'offers#favorite'
   devise_for :users
   resources :users
-  root 'home#index'
+  resources :offers
+  get "latest", to: "offers#latest"
 end

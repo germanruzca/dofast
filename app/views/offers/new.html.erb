@@ -1,0 +1,41 @@
+<div class="new_offer_container">
+  <div class="new_offer_header">
+    <h1>Create offer</h1>
+    <p>Please, fill the next form to publish an offer</p>
+  </div>
+  <div class="form_container">
+    <%= form_for @offer do |f| %>
+      <div class="field_offer">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="field_offer">
+        <%= f.label :description %>
+        <%= f.rich_text_area :description %>
+      </div>
+
+      <div class="field_offer">
+        <%= f.label :earning %>
+        <%= f.number_field :earning %>
+      </div>
+
+      <div class="field_offer">
+        <%= f.label :offer_type_id %>
+        <%= f.select(:offer_type_id, options_from_collection_for_select(OfferType.all, :id, :name)) %>
+      </div>
+
+      <div class="field_offer">
+        <%= f.label :tag_id %>
+        <%= f.select(:tag_id, options_from_collection_for_select(Tag.all, :id, :name)) %>
+      </div>
+
+      <div class="field_offer">
+        <%= f.label :previous_conversation %>
+        <%= f.check_box :previous_conversation %>
+      </div>
+
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

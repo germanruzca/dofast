@@ -1,0 +1,13 @@
+<div class="header_tags">
+  <div class="tags">
+    <h1>
+      <%= link_to "Favorite", root_path, class: "#{current_page?(root_path) ? "tags_color_selected" : "tags_color_unselected"}" %>
+    </h1>
+  </div>
+
+  <div class="tags">
+    <h1>
+      <%= link_to "Latest", latest_path, class: "#{current_page?(root_path) ? "tags_color_unselected" : "tags_color_selected"}" %>
+    </h1>
+  </div>
+</div>

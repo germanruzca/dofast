@@ -6,6 +6,11 @@
 .sidebar_container {
     width: 359px;
     height: 100vh;
+    z-index: 1000;
+    /*position: fixed;*/
+    /*position: fixed;*/
+    bottom: 0;
+    overflow: hidden;
 }
 
 

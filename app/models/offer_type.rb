@@ -1,3 +1,3 @@
 class OfferType < ApplicationRecord
-  has_many :offer
+  has_many :offers
 end
