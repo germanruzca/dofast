@@ -1,8 +1,9 @@
 <% @offers.each do | offer | %>
   <div class="offer_card">
-    <div>
+    <div class="offer__header">
       <h2><%= offer.title %></h2>
-    </div>
+      <a href="<%= offer_path(offer.id) %>"><i class="fa-solid fa-circle-arrow-right"></i></a>
+    </div>  
     <div>
       <p><i class="fa-solid fa-tag"></i> <%= offer.tag.name %></p>
     </div>
