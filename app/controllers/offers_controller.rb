@@ -9,6 +9,15 @@ class OffersController < ApplicationController
     @offers = Offer.all.includes(:offer_type, :user).where(created_at: 1.day.ago..Time.now).order(created_at: :desc)
   end
 
+  def show 
+    @offer = Offer.find_by(id: params[:id])
+
+    unless @offer
+      flash[:error] = 'Offer not found'
+      redirect_to root_path
+    end
+  end
+
   def new
     @offer = Offer.new
     @types_of_offer = OfferType.all.map { |type| [type.name, type.id] }
