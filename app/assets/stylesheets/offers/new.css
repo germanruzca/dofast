@@ -21,3 +21,55 @@
     border-radius: 10px;
     font-size: 20px;
 }
+
+input, label {
+    display:block;
+}
+
+.form__component {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.form__component label{
+    text-align: center;
+}
+
+.form__label {
+    font-size: 20px;
+}
+
+.form__input {
+    align-self: center;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.three__component {
+    display: flex;
+    justify-content: space-around;
+}
+
+.three__component div input, select {
+    margin-top: 10px;
+    width: 100px;
+}
+
+ .description__form trix-editor {
+    height: 300px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+ .previous__form {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+ }
+
+ .previous__form input {
+     margin-left: 10px;
+ }
