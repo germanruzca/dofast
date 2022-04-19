@@ -1,24 +1,13 @@
-# README
+## dofast
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+`dofast` is a personal project application to publish and receive offers to students and generate extra income.
 
-Things you may want to cover:
+This application has made it to practice Ruby On Rails as Frontend and Backend.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Using:
+- Ruby on Rails
+- CSS
+- Font Awesome
+- Devise
+	
+![dofast logo](app/assets/images/logo.png)
